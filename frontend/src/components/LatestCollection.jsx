@@ -6,6 +6,7 @@ import Title from "./Title";
 
 const LatestCollection = () => {
   const { data: products, isLoading, error } = useGetProductsQuery({});
+  console.log(products);
 
   return (
     <div className="my-10">
