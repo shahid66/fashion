@@ -14,7 +14,7 @@ connectDB();
 const app = express();
 
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({ origin: "https://fashion-b70x.onrender.com/" }));
 // const corsOptions = {
 //   origin: "http://localhost:5173", // Allow only the frontend origin
 //   credentials: true, // Allow credentials (cookies)
