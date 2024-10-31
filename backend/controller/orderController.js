@@ -19,15 +19,6 @@ const registerOrder = asyncHandler(async (req, res) => {
     emailAddress: shippingAddress.emailAddress,
     phone: shippingAddress.phone,
   };
-  console.log(
-    orderItem,
-    shippingAddress,
-    paymentMethod,
-    itemsPrice,
-    taxPrice,
-    shippingPrice,
-    totalPrice
-  );
 
   try {
     const order = new Order({

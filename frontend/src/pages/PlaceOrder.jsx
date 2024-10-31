@@ -181,8 +181,8 @@ const PlaceOrder = () => {
 
             <div className="flex gap-3 flex-col lg:flex-row">
               <div
-                onClick={() => setMethod("stripe")}
-                className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
+                // onClick={() => setMethod("stripe")}
+                className="flex items-center gap-3 border p-2 px-3 cursor-pointer pointer-events-none opacity-50"
               >
                 <p
                   className={`min-w-3.5 h-3.5 border rounded-full ${
@@ -192,8 +192,8 @@ const PlaceOrder = () => {
                 <img src={assets.stripe_logo} className="h-5 mx-4" alt="" />
               </div>
               <div
-                onClick={() => setMethod("razorpay")}
-                className="flex items-center gap-3 border p-2 px-3 cursor-pointer"
+                // onClick={() => setMethod("razorpay")}
+                className="flex items-center gap-3 border p-2 px-3 cursor-pointer pointer-events-none opacity-50"
               >
                 <p
                   className={`min-w-3.5 h-3.5 border rounded-full ${

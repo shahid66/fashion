@@ -4,6 +4,10 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { authLogOut } from "../feature/auth/authSlice";
 import { useLogOutMutation } from "../feature/auth/userSlice";
+import {
+  clearCartItems,
+  clearShippingAddress,
+} from "../feature/cart/cartSlice";
 
 const Navbar = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -16,6 +20,8 @@ const Navbar = () => {
     try {
       const res = await logOut();
       dispatch(authLogOut());
+      dispatch(clearCartItems());
+      dispatch(clearShippingAddress());
       navigate("/login");
     } catch (error) {}
   };
