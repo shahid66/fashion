@@ -6,7 +6,7 @@ import { useGetOrderQuery } from "../feature/order/orderSlice";
 const OrderDetailsPage = () => {
   const { id } = useParams();
   const { data: order, isLoading, error } = useGetOrderQuery(id);
-  
+
   return (
     <div className="flex flex-col sm:flex-row justify-between gap-4 pt-5 sm:pt-14 min-h-[80vh] border-t">
       <div className="flex flex-col gap-4 w-full sm:max-w-[680px]">
@@ -91,11 +91,7 @@ const OrderDetailsPage = () => {
             {order.orderItems.map((x) => (
               <div className="flex flex-col sm:flex-row justify-between  pt-5 sm:pt-14  border-t">
                 <div className="flex items-start gap-6">
-                  <img
-                    src={`http://localhost:5000${x.image}`}
-                    className="w-16 sm:w-20"
-                    alt=""
-                  />
+                  <img src={`${x.image}`} className="w-16 sm:w-20" alt="" />
                   <div>
                     <p className="text-sm sm:text-lg">{x.name}</p>
                     <div className="flex items-center gap-5 mt-2">

@@ -115,7 +115,7 @@ const ProductListPage = () => {
                     <td className="p-3  text-gray-700">
                       <img
                         className="w-20"
-                        src={`http://localhost:5000${product.image[0].name}`}
+                        src={`${product.image[0].name}`}
                       />
                     </td>
                     <td className="p-3  text-gray-700">{product.brand}</td>

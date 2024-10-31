@@ -134,7 +134,7 @@ const ProductEditPage = () => {
                         <img
                           key={index}
                           className="w-32"
-                          src={`http://localhost:5000${x.name}`}
+                          src={`${x.name}`}
                           alt=""
                         />
                       ))}

@@ -14,15 +14,15 @@ connectDB();
 const app = express();
 
 app.use(cookieParser());
-// app.use(cors());
-const corsOptions = {
-  origin: "http://localhost:5173", // Allow only the frontend origin
-  credentials: true, // Allow credentials (cookies)
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: "Content-Type", // Allowed headers
-};
+app.use(cors());
+// const corsOptions = {
+//   origin: "http://localhost:5173", // Allow only the frontend origin
+//   credentials: true, // Allow credentials (cookies)
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   allowedHeaders: "Content-Type", // Allowed headers
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
