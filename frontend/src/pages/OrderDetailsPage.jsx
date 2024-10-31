@@ -91,7 +91,7 @@ const OrderDetailsPage = () => {
             {order.orderItems.map((x) => (
               <div className="flex flex-col sm:flex-row justify-between  pt-5 sm:pt-14  border-t">
                 <div className="flex items-start gap-6">
-                  <img src={`${x.image}`} className="w-16 sm:w-20" alt="" />
+                  <img src={`https://fashion-b70x.onrender.com${x.image}`} className="w-16 sm:w-20" alt="" />
                   <div>
                     <p className="text-sm sm:text-lg">{x.name}</p>
                     <div className="flex items-center gap-5 mt-2">

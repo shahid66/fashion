@@ -11,7 +11,7 @@ import Title from "./../../components/Title";
 
 const ProductListPage = () => {
   const { userInfo } = useSelector((state) => state.auth);
-  
+
   const { data: products, isLoading, error } = useGetProductsQuery({});
   const [productRegister, { isLoading: createLoading }] =
     useProductRegisterMutation();
@@ -114,10 +114,7 @@ const ProductListPage = () => {
                     </td>
                     <td className="p-3  text-gray-700">{product.name}</td>
                     <td className="p-3  text-gray-700">
-                      <img
-                        className="w-20"
-                        src={`${product.image[0].name}`}
-                      />
+                      <img className="w-20" src={`${product.image[0].name}`} />
                     </td>
                     <td className="p-3  text-gray-700">{product.brand}</td>
                     <td className="p-3  text-gray-700">{product.category}</td>

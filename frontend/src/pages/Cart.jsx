@@ -47,7 +47,11 @@ const Cart = () => {
               className="py-4 border-t border-b text-gray-700 grid grid=cols=[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
             >
               <div className="flex items-start gap-6">
-                <img src={`${item.image}`} className="w-16 sm:w-20" alt="" />
+                <img
+                  src={`https://fashion-b70x.onrender.com${item.image}`}
+                  className="w-16 sm:w-20"
+                  alt=""
+                />
                 <div>
                   <p className="text-sm sm:text-lg">{item.name}</p>
                   <div className="flex items-center gap-5 mt-2">

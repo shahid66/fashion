@@ -9,7 +9,7 @@ const ProductItem = ({ item }) => {
       <div className="overflow-hidden">
         <img
           className="hover:scale-110 transition ease-in-out"
-          src={`{image[0].name} `}
+          src={`https://fashion-b70x.onrender.com${image[0].name} `}
           alt=""
         />
         <p className="pt-3 pb-1 text-sm">{name}</p>

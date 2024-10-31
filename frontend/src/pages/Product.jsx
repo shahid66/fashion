@@ -56,7 +56,11 @@ const Product = () => {
             ))}
           </div>
           <div className="w-full sm:w-[80%]">
-            <img src={`${image}`} className="w-full h-auto" alt="" />
+            <img
+              src={`https://fashion-b70x.onrender.com${image}`}
+              className="w-full h-auto"
+              alt=""
+            />
           </div>
         </div>
 

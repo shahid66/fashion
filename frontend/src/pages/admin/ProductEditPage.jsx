@@ -134,7 +134,7 @@ const ProductEditPage = () => {
                         <img
                           key={index}
                           className="w-32"
-                          src={`${x.name}`}
+                          src={`https://fashion-b70x.onrender.com${x.name}`}
                           alt=""
                         />
                       ))}
