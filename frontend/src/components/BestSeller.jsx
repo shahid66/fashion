@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useGetProductsQuery } from "../feature/product/productSlice";
 import ProductItem from "./ProductItem";
 import Title from "./Title";
 
 const BestSeller = () => {
-  const [bestSeller, setBestSeller] = useState([]);
   const { data: products, isLoading, error } = useGetProductsQuery({});
-  useEffect(() => {
-    if (products) {
-      setBestSeller(products);
-    }
-  }, [products]);
   return (
     <div className="my-10">
       <div className="text-center text-3xl py-8">
@@ -31,9 +25,8 @@ const BestSeller = () => {
             <h6>Error..</h6>
           )
         ) : (
-          bestSeller &&
-          bestSeller
-            .filter((x) => x.bestseller == true)
+          (products || [])
+            .filter((x) => x.bestseller === true)
             .map((item, index) => <ProductItem key={index} item={item} />)
         )}
       </div>

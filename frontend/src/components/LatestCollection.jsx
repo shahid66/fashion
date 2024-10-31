@@ -28,7 +28,9 @@ const LatestCollection = () => {
             <h6>Error...</h6>
           )
         ) : (
-          products.map((item, index) => <ProductItem key={index} item={item} />)
+          (products || []).map((item, index) => (
+            <ProductItem key={index} item={item} />
+          ))
         )}
       </div>
     </div>
