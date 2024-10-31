@@ -11,6 +11,7 @@ import Title from "./../../components/Title";
 
 const ProductListPage = () => {
   const { userInfo } = useSelector((state) => state.auth);
+  
   const { data: products, isLoading, error } = useGetProductsQuery({});
   const [productRegister, { isLoading: createLoading }] =
     useProductRegisterMutation();

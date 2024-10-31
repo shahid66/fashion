@@ -25,6 +25,7 @@ const BestSeller = () => {
             <h6>Error..</h6>
           )
         ) : (
+          products &&
           products
             .filter((x) => x.bestseller == true)
             .map((item, index) => <ProductItem key={index} item={item} />)
